@@ -4,29 +4,36 @@
   <link rel="apple-touch-icon" href="pikachu.png" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pikachu</title>
-  <style>
-    .hidden {
-      display: none;
-    }
-  </style>
+  <title>Show/Hide Image</title>
+<style>
+  .pikachu {
+    display: none;
+  }
+  .monster {
+    display: none;
+  }
+</style>
 </head>
 <body>
 
-<button onclick="waarIsPikachu()">Waar is Pikachu?</button>
+<button onclick="waarIsPikachu()">Waar is Pikachu</button>
+<button onclick="waarIsMonster()">Waar is Monster</button>
 
-<img id="pikachu" class="hidden" src="pikachu.png" alt="Pikachu">
+<br />
+<img id="pikachu" class="pikachu" src="pikachu.png" alt="Pikachu">
+<img id="monster" class="monster" src="monster.png" alt="Monster">
 
 <script>
   function waarIsPikachu() {
     var image = document.getElementById("pikachu");
-    if (image.style.display === "none") {
-      image.style.display = "block";
-    } else {
-      image.style.display = "none";
-    }
+    image.classList.toggle("pikachu");
   }
-  </script>
+  function waarIsMonster() {
+    var image = document.getElementById("monster");
+    image.classList.toggle("monster");
+  }
+
+</script>
 
 </body>
 </html>
