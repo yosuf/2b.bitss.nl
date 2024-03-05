@@ -1,14 +1,32 @@
-<!doctype html>
-<html>
-  <head>
-    <title>2B!</title>
-    <link rel="apple-touch-icon" href="pikachu.png" />
-  </head>
-  <body>
-    <p>Hoi 2B!</p>
-    <!-- <img src="pikachu.png" alt="Ik ben Pikachu!"> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="apple-touch-icon" href="pikachu.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pikachu</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
 
-    <button type="button" onclick="alert('Pikachu!')">Hier klikken!</button>
- 
-  </body>
+<button onclick="waarIsPikachu()">Waar is Pikachu?</button>
+
+<img id="pikachu" class="hidden" src="pikachu.png" alt="Pikachu">
+
+<script>
+  function waarIsPikachu() {
+    var image = document.getElementById("pikachu");
+    if (image.style.display === "none") {
+      image.style.display = "block";
+    } else {
+      image.style.display = "none";
+    }
+  }
+  </script>
+
+</body>
 </html>
