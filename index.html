@@ -12,16 +12,21 @@
   .monster {
     display: none;
   }
+  .konijn {
+    display: none;
+  }
 </style>
 </head>
 <body>
 
 <button onclick="waarIsPikachu()">Waar is Pikachu</button>
 <button onclick="waarIsMonster()">Waar is Monster</button>
+<button onclick="waarIsPikachu()">Waar is Konijn</button>
 
 <br />
 <img id="pikachu" class="pikachu" src="pikachu.png" alt="Pikachu">
 <img id="monster" class="monster" src="monster.png" alt="Monster">
+<img id="konijn" class="konijn" src="konijn.jpeg" alt="Konijn">
 
 <script>
   function waarIsPikachu() {
@@ -31,6 +36,10 @@
   function waarIsMonster() {
     var image = document.getElementById("monster");
     image.classList.toggle("monster");
+  }
+  function waarIsKonijn() {
+    var image = document.getElementById("konijn");
+    image.classList.toggle("konijn");
   }
 
 </script>
